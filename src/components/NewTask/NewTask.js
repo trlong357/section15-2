@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Section from "../UI/Section";
 import TaskForm from "./TaskForm";
+
 const NewTask = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -26,6 +27,7 @@ const NewTask = (props) => {
       }
 
       const data = await response.json();
+
       const generatedId = data.name; // firebase-specific => "name" contains generated id
       const createdTask = { id: generatedId, text: taskText };
 
