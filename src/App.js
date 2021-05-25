@@ -18,6 +18,7 @@ function App() {
 
       setTasks(loadedTasks);
     };
+
     fetchTasks(
       {
         url: "https://todos-5967f-default-rtdb.firebaseio.com/tasks.json",
